@@ -1,11 +1,20 @@
-import styles from './Footer.module.css';
+export interface IFooter extends React.ComponentPropsWithoutRef<'footer'> {}
 
-export interface IFooter {
-  sampleTextProp: string;
-}
-
-const Footer: React.FC<IFooter> = ({ sampleTextProp }) => {
-  return <div className={styles.container}>{sampleTextProp}</div>;
+const Footer: React.FC<IFooter> = ({ className, ...footerProps }) => {
+  return (
+    <footer
+      className={`w-full p-5 bg-black text-white flex justify-center items-center ${className}`}
+      {...footerProps}
+    >
+      <ul className="w-2/4 list-none flex justify-between">
+        <li>About Us</li>
+        <li>/</li>
+        <li>Terms</li>
+        <li>/</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </footer>
+  );
 };
 
 export default Footer;
