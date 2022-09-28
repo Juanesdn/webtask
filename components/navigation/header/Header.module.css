@@ -1,0 +1,13 @@
+.nav_item {
+  -ms-transform: skewX(-15deg); /* IE 9 */
+  -webkit-transform: skewX(-15deg); /* Safari */
+  transform: skewX(-15deg);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.nav_item__content {
+  -ms-transform: skewX(15deg); /* IE 9 */
+  -webkit-transform: skewX(15deg); /* Safari */
+  transform: skewX(15deg);
+}
