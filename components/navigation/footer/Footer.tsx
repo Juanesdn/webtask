@@ -6,7 +6,7 @@ const Footer: React.FC<IFooter> = ({ className, ...footerProps }) => {
       className={`w-full p-5 bg-black text-white flex justify-center items-center ${className}`}
       {...footerProps}
     >
-      <ul className="w-2/4 list-none flex justify-between">
+      <ul className="xs:w-full  md:w-2/4 list-none flex justify-between">
         <li>About Us</li>
         <li>/</li>
         <li>Terms</li>
