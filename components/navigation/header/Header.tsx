@@ -12,7 +12,9 @@ const BaseTemplate: React.FC<IHeader> = ({ className, ...headerProps }) => {
     >
       <div className="space-x-5 m-5"></div>
       <div className="flex ">
-        <div className={`h-full text-white pt-6 pb-4 px-6 xs:hidden md:block`}>
+        <div
+          className={`h-full text-white pt-6 pb-4 px-6 xs:hidden md:block hover:cursor-pointer`}
+        >
           <Link href="/">
             <div>
               <FaSearch />
