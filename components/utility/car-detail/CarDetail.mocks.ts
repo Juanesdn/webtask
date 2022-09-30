@@ -14,6 +14,7 @@ const base: ICarDetail = {
     shares: 15,
   },
   src: 'string',
+  photos: [''],
 };
 
 export const mockCarDetailProps = {
