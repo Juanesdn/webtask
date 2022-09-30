@@ -6,6 +6,7 @@ This is a web project for React that uses Next.js.
 * Husky
 * Unit tests
 * TailwindCSS
+* MongoDB
 
 
 
