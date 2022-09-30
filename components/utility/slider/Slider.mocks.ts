@@ -1,7 +1,7 @@
 import { ISlider } from './Slider';
 
 const base: ISlider = {
-  sampleTextProp: 'Hello World!',
+  photos: [''],
 };
 
 export const mockSliderProps = {
