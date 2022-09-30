@@ -1,5 +1,6 @@
 import Image, { ImageProps } from 'next/image';
 import { FaEnvelope } from 'react-icons/fa';
+import { Slider } from '../slider';
 
 export interface ICarDetail extends ImageProps {
   carSpecs: {
@@ -15,6 +16,7 @@ export interface ICarDetail extends ImageProps {
     shares: number;
   };
   src: string;
+  photos: string[];
 }
 
 const CarDetail: React.FC<ICarDetail> = ({
@@ -30,13 +32,17 @@ const CarDetail: React.FC<ICarDetail> = ({
     saves,
     shares,
   },
+  photos,
   src,
   alt,
 }) => {
   return (
     <div className="flex xs:flex-col md:flex-row w-full h-full bg-white xs:mb-3 md:mb-0">
-      <div className="md:w-3/4 xs:w-full xs:h-64 md:h-[45rem] relative">
+      <div className="md:w-3/4 xs:hidden md:block xs:w-full xs:h-64 md:h-[45rem] relative">
         <Image src={src} alt={alt} layout="fill" />
+      </div>
+      <div className="md:w-3/4 xs:w-full xs:block md:hidden xs:h-64 md:h-[45rem] relative">
+        <Slider photos={photos} />
       </div>
       <div className="xs:w-full md:w-1/4 md:mt-12 xs:mt-8 xs:pl-5 md:pl-0 md:ml-10">
         <h1 className="md:mb-8 xs:mb-4 text-4xl font-bold text-[#343434]">

@@ -44,7 +44,7 @@ const Home: NextPageWithLayout<ICarResults> = ({
       </Head>
       {carSpecs ? (
         <>
-          <CarDetail src={currPhoto} carSpecs={carSpecs} />
+          <CarDetail src={currPhoto} carSpecs={carSpecs} photos={photos} />
           <CTAButton text="CALL US" />
           <Photos photos={photos} setPhoto={setCurrPhoto} />
           <div className="mb-10 xs:mx-0 md:mx-8 xs:flex-col md:flex-row flex justify-around gap-2">

@@ -9,3 +9,7 @@
 body {
   background-color: #EFEFF2;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #FFFFFF !important;
+}
