@@ -1,7 +1,8 @@
 import { IPhotos } from './Photos';
 
 const base: IPhotos = {
-  sampleTextProp: 'Hello World!',
+  photos: [''],
+  setPhoto: () => {},
 };
 
 export const mockPhotosProps = {
