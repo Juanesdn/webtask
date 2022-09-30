@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { ICarData } from './types';
 
 // Connection url (Get Database Url from .env.local)
 const { DB_URL } = process.env;
@@ -12,18 +11,20 @@ export const connect = async () => {
   console.log('Mongoose Connection Established');
 
   // Car schema
-  const CarSchema = new mongoose.Schema<ICarData>({
-    item_number: String,
-    vin: String,
-    name: String,
-    year: Number,
-    startingPrice: Number,
-    endingPrice: Number,
-    mileage: Number,
+  const CarSchema = new mongoose.Schema({
+    carSpecs: {
+      item_number: String,
+      vin: String,
+      name: String,
+      year: Number,
+      startingPrice: Number,
+      endingPrice: Number,
+      mileage: Number,
+      views: Number,
+      saves: Number,
+      shares: Number,
+    },
     photos: [String],
-    views: Number,
-    saves: Number,
-    shares: Number,
     exterior: {
       cylinders: String,
       cityMPG: Number,
@@ -39,7 +40,7 @@ export const connect = async () => {
   });
 
   // Cars model
-  const Cars = mongoose.model<ICarData>('Cars', CarSchema);
+  const Cars = mongoose.models.Cars || mongoose.model('Cars', CarSchema);
 
   return { conn, Cars };
 };

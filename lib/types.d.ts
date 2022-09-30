@@ -1,26 +1,28 @@
 export interface ICarData {
-  item_number: string;
-  vin: string;
-  name: string;
-  year: number;
-  startingPrice: number;
-  endingPrice: number;
-  mileage: number;
+  carSpecs: {
+    item_number: string;
+    vin: string;
+    name: string;
+    year: number;
+    startingPrice: number;
+    endingPrice: number;
+    mileage: number;
+    views: number;
+    saves: number;
+    shares: number;
+  };
   photos: string[];
-  views: number;
-  saves: number;
-  shares: number;
   exterior: {
     cylinders: string;
-    city_mpg: number;
-    highway_mpg: number;
-    enginer: number;
+    cityMPG: number;
+    highwayMPG: number;
+    engine: number;
   };
   performance: {
     cylinders: string;
-    city_mpg: number;
-    highway_mpg: number;
-    enginer: number;
+    cityMPG: number;
+    highwayMPG: number;
+    engine: number;
   };
 }
 

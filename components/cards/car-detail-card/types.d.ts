@@ -1,4 +1,6 @@
 export interface CarSpecs {
-  name: string;
-  value: string;
+  cylinders: string;
+  cityMPG: number;
+  highwayMPG: number;
+  engine: number;
 }
