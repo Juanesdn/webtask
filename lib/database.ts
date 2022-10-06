@@ -1,12 +1,9 @@
 import mongoose from 'mongoose';
 
-// Connection url (Get Database Url from .env.local)
-const { DB_URL } = process.env;
-
 // connection function
 export const connect = async () => {
   const conn = await mongoose
-    .connect(DB_URL as string)
+    .connect(process.env.DB_URL as string)
     .catch((err) => console.log(err));
   console.log('Mongoose Connection Established');
 
